@@ -23,7 +23,7 @@
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
     <FileUpgradeFlags />
-    <ActivePublishProfile>ProjectUnitemailapp - Web Deploy</ActivePublishProfile>
+    <ActivePublishProfile>rtmailapp - Web Deploy</ActivePublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
