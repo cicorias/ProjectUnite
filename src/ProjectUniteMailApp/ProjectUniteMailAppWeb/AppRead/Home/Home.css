@@ -1,0 +1,41 @@
+﻿/* Page-specific styling */
+
+#details {
+    margin-left: 15px;
+}
+
+    #details th {
+        text-align: left;
+        padding-right: 10px;
+    }
+
+#from {
+    cursor: pointer;
+    color: #336699;
+}
+
+    #from:focus, #from:hover, #from:active {
+        color: #4ea2df;
+    }
+
+#btnDoit {
+}
+
+.profileimg {
+    height: 64px;
+    width:64px;
+}
+
+#subject{
+    padding-left:20px;
+    padding-top:0px;
+    padding-bottom:0px;
+    font-weight:bold;
+}
+
+#skills{
+    padding-left:20px;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+

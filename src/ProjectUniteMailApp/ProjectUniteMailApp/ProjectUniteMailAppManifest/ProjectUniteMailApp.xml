@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="MailApp">
+  <Id>dfe1610e-883e-4b87-8556-379f911aa4ae</Id>
+  <Version>1.0.1.1</Version>
+  <ProviderName>ProjectUnite</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="ProjectUnite Opportunity" />
+  <Description DefaultValue="ProjectUnite Opportunity and Matcher Mail App"/>
+  <IconUrl DefaultValue="~remoteAppUrl/Images/logo64x64.jpg" />
+  <SupportUrl DefaultValue="~remoteAppUrl/Support.html" />
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="MailBox" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="~remoteAppUrl/AppRead/Home/Home.html"/>
+        <RequestedHeight>350</RequestedHeight>
+      </DesktopSettings>
+      <TabletSettings>
+        <SourceLocation DefaultValue="~remoteAppUrl/AppRead/Home/Home.html" />
+        <RequestedHeight>200</RequestedHeight>
+      </TabletSettings>
+      <PhoneSettings>
+        <SourceLocation DefaultValue="~remoteAppUrl/AppRead/Home/Home.html" />
+      </PhoneSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="And">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+    <Rule xsi:type="RuleCollection" Mode="Or" >
+      <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="opportunitySubject" RegExValue="opportunity|project" PropertyName="Subject" IgnoreCase="true" />
+      <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="opportunity" RegExValue="opportunity|project" PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+    </Rule>
+  </Rule>
+  <DisableEntityHighlighting>true</DisableEntityHighlighting>
+</OfficeApp>
